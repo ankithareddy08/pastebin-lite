@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A simple place to paste text, set optional limits, and share a link.">
+    <meta name="theme-color" content="#f6f7f2">
+    <title>Pastebin Lite — Text, simply shared.</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="/" aria-label="Pastebin Lite home">
+          <span class="brand-mark" aria-hidden="true">[ / ]</span>
+          <span class="brand-name">Pastebin <span>Lite</span></span>
+        </a>
+        <span class="brand-meta">Text, simply shared.</span>
+      </header>
+
+      <main id="main">
+        <section class="intro" aria-labelledby="page-title">
+          <div>
+            <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> SMALL TOOL. SIMPLE SHARING.</p>
+            <h1 id="page-title">A little text.<br>A link to share.</h1>
+          </div>
+          <p class="intro-copy">Notes, snippets, or something worth passing along. Paste it here, choose your limits, and send it on.</p>
+        </section>
+
+        <div class="workspace">
+          <section class="editor-card" aria-labelledby="editor-title">
+            <form data-paste-form>
+              <div class="card-heading">
+                <div>
+                  <p class="eyebrow">01 / COMPOSE</p>
+                  <h2 id="editor-title">Create a paste</h2>
+                </div>
+                <span class="pill">Plain text</span>
+              </div>
+
+              <div class="editor-field">
+                <div class="label-row">
+                  <label for="content">Your text</label>
+                  <span class="character-count" data-character-count>0 characters</span>
+                </div>
+                <textarea id="content" name="content" rows="12" placeholder="Write something here, or paste it in…" required spellcheck="false" aria-describedby="content-help"></textarea>
+                <p class="field-help" id="content-help">Your formatting stays as it is. Code is displayed as text.</p>
+              </div>
+
+              <div class="limits-section">
+                <div class="limits-heading">
+                  <h3>Set your limits</h3>
+                  <span>Optional</span>
+                </div>
+                <div class="limits-grid">
+                  <div class="field">
+                    <label for="ttl_seconds">Expire after</label>
+                    <div class="input-with-unit">
+                      <input id="ttl_seconds" name="ttl_seconds" type="number" min="1" step="1" inputmode="numeric" placeholder="No expiry" aria-describedby="ttl-help">
+                      <span aria-hidden="true">seconds</span>
+                    </div>
+                    <p class="field-help" id="ttl-help">Leave blank to keep it available.</p>
+                  </div>
+                  <div class="field">
+                    <label for="max_views">Maximum views</label>
+                    <div class="input-with-unit">
+                      <input id="max_views" name="max_views" type="number" min="1" step="1" inputmode="numeric" placeholder="Unlimited" aria-describedby="views-help">
+                      <span aria-hidden="true">views</span>
+                    </div>
+                    <p class="field-help" id="views-help">Each visit uses one view.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-error" data-form-error role="alert" hidden></div>
+
+              <div class="form-footer">
+                <p>Ready when you are.</p>
+                <button class="button button-primary" type="submit" data-submit-button><span data-submit-label>Create paste</span><span aria-hidden="true">↗</span></button>
+              </div>
+            </form>
+
+            <section class="success-panel" data-success-panel aria-labelledby="success-title" tabindex="-1" hidden>
+              <div class="success-heading">
+                <span class="success-icon" aria-hidden="true">✓</span>
+                <div><h3 id="success-title">Your paste is ready.</h3><p>Copy the link and pass it along.</p></div>
+              </div>
+              <label class="visually-hidden" for="share-url">Shareable paste link</label>
+              <div class="share-row">
+                <input id="share-url" type="url" readonly>
+                <button class="button button-secondary" type="button" data-copy-target="share-url">Copy link</button>
+              </div>
+              <div class="success-footer">
+                <a class="text-link" data-open-paste href="/">Open paste <span aria-hidden="true">↗</span></a>
+                <p class="copy-feedback" data-copy-feedback role="status" aria-live="polite"></p>
+              </div>
+              <p class="field-help">Opening this link counts as a view if you set a view limit.</p>
+            </section>
+          </section>
+
+          <aside class="side-notes" aria-label="How sharing works">
+            <div class="note-illustration" aria-hidden="true"><span class="illustration-line"></span><span class="illustration-line"></span><span class="illustration-line short"></span><span class="illustration-arrow">↗</span></div>
+            <h2>Less setup.<br>More sharing.</h2>
+            <p>No account to create. No extra steps. Just your text and a link.</p>
+            <div class="side-divider"></div>
+            <div class="note-item"><span class="note-number">01</span><div><h3>Make it yours</h3><p>Anything you can type, ready to share.</p></div></div>
+            <div class="note-item"><span class="note-number">02</span><div><h3>Choose when it ends</h3><p>Use a time limit, a view limit, both, or neither.</p></div></div>
+            <div class="note-item"><span class="note-number">03</span><div><h3>Send the link</h3><p>Anyone with the link can read it while it’s available.</p></div></div>
+            <p class="privacy-note">When either limit is reached, the link stops working. Leave both blank to share without limits.</p>
+          </aside>
+        </div>
+      </main>
+
+      <footer class="site-footer"><span>Pastebin Lite</span><span>A small space for things worth sharing.</span></footer>
+    </div>
+  </body>
+</html>

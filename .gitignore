@@ -1,0 +1,13 @@
+node_modules/
+.env
+.env.*
+!.env.example
+.vercel/
+data/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+coverage/
+tmp/
+*.log
+.DS_Store
