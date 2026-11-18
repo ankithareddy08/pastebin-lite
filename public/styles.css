@@ -37,7 +37,6 @@ h1, h2, h3, p { margin: 0; }
 .eyebrow { display: flex; align-items: center; gap: 8px; font-size: 10px; font-weight: 650; letter-spacing: .13em; line-height: 1.5; }
 .status-dot { width: 6px; height: 6px; background: #74916b; border-radius: 50%; }
 h1 { font-size: clamp(36px, 4.4vw, 56px); line-height: 1.08; letter-spacing: -.055em; font-weight: 570; margin-top: 17px; }
-.intro-copy { max-width: 302px; padding-bottom: 4px; color: var(--muted); line-height: 1.75; font-size: 14px; }
 .workspace { display: grid; grid-template-columns: minmax(0, 1fr) 250px; gap: 40px; align-items: start; }
 .editor-card, .viewer-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 5px 20px #172d2a03; overflow: hidden; }
 .card-heading { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 27px 30px 24px; }
@@ -121,7 +120,6 @@ input { color: var(--ink); min-width: 0; }
   .page-shell { width: min(760px, calc(100% - 48px)); }
   .workspace { grid-template-columns: minmax(0, 1fr) 200px; gap: 25px; }
   .intro { gap: 25px; }
-  .intro-copy { max-width: 240px; font-size: 13px; }
   .card-heading, .limits-section, .form-footer, .success-panel { padding-left: 23px; padding-right: 23px; }
   .editor-field { padding-left: 23px; padding-right: 23px; }
   .form-error { margin-left: 23px; margin-right: 23px; }
@@ -137,7 +135,6 @@ input { color: var(--ink); min-width: 0; }
   .brand { gap: 10px; }
   .intro { padding: 35px 0 26px; display: block; }
   h1 { font-size: 44px; margin-top: 14px; }
-  .intro-copy { max-width: 360px; margin-top: 18px; font-size: 13px; }
   .workspace { display: block; }
   .side-notes { display: none; }
   .card-heading { padding-top: 23px; }
